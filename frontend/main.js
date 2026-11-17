@@ -4,7 +4,7 @@ let mode = "CREATE";
 let selectedId = "";
 let noProblem = "";
 
-const API = import.meta.env.VITE_API_URL;
+const API = "/api";
 
 // URLSearchParams
 window.onload = async () => {

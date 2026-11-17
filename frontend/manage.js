@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = import.meta.env.VITE_API_URL;
+const API = "/api";
 const usersCon = document.querySelector("#getUsersCon");
 
 // DELETE

@@ -2,6 +2,7 @@ import express from "express";
 import usersRouter from "./users.js";
 import cors from "cors";
 
+// Main server
 const host = "0.0.0.0";
 const port = 8000;
 const app = express();

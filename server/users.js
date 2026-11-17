@@ -1,9 +1,11 @@
 import express from "express";
 import { createClient } from "@libsql/client";
+import "dotenv/config";
 
-// Use libSQL
+// Use libSQL (Turso)
 const db = createClient({
-    url: "file:/Users/macsuphawit/Documents/Javascript_Form/server/databaseFlie.db"
+    url: process.env.TURSO_URL,
+    authToken: process.env.TURSO_AUTH_TOKEN
 })
 const usersRouter = express.Router();
 usersRouter.use(express.json());
@@ -56,7 +58,7 @@ usersRouter.get("/:id", async (req, res) => {
 usersRouter.post("/", async (req, res) => {
     try {
         const { fullname, age, address, gender, interest, infomation } = req.body;
-        if (!fullname || !age || !address || !gender || !interest) {
+        if (!fullname || !age || !address || !gender || !interest || !infomation) {
             return res.status(400).json({
                 error: "404 Bad request"
             })

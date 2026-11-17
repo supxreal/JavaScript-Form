@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="m-2 text-blue-600 underline" href="index.html">Register Page</a>
+    <div class="flex flex-col mx-auto bg-white/60 w-[90vw] min-h-[92dvh] rounded-md">
+        <div class="flex flex-row justify-center items-center gap-1 m-4">
+            <label for="find-input">Find userID</label>
+            <input class="w-30" type="number" name="search" id="find-input">
+            <button id="find" class="w-14 h-9" type="button">Enter</button>
+        </div>
+        <div id="getUsersCon">
+            <!-- USERS -->
+        </div>
+    </div>
+    <script type="module" src="manage.js"></script>
+</body>
+</html>

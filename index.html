@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="m-2 text-blue-600 underline" href="management.html">Management Page</a>
+    <main>
+        <p>Register</p>
+        <form>
+            <div class="name-age">
+                <div class="class-name">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" name="fullname" id="fullname">
+                </div>
+                <div class="class-age">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age">
+                </div>
+            </div>
+            <div class="cl-add">
+                <label for="address">address</label>
+                <input type="text" name="address" id="address">
+            </div>
+            <div class="gender-ins">
+                <div class="cl-gen">
+                    <label for="gender">Gender: </label>
+                    <input type="radio" name="gender" id="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="other">Other
+                </div>
+                <div class="cl-ins">
+                    <label for="interest">Interest: </label>
+                    <input type="checkbox" name="interest" id="interest" value="coding">Coding
+                    <input type="checkbox" name="interest" value="anime">Anime
+                    <input type="checkbox" name="interest" value="games">Games
+                </div>
+            </div>
+            <div class="cl-more">
+                <label for="more-info">More Infomation</label>
+                <textarea name="more-info" id="more-info"></textarea>
+            </div>
+
+            <div class="btn">
+                <button id="sub-btn" type="submit" value="submit">Submit</button>
+            </div>
+        </form>
+        <div id="status">
+           <!-- SHOW STATUS -->
+        </div>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: #4963ab;
+    background: linear-gradient(335deg, rgba(73, 99, 171, 1) 0%, rgba(102, 178, 232, 1) 50%, rgba(245, 242, 220, 1) 100%);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgb(32, 35, 44);
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.547);
+    box-shadow: 0 4px 30px rgba(65, 65, 92, 0.144);
+    border: 1px solid rgba(255, 255, 255, 0.49);
+    border-radius: 10px;
+}
+
+form {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 20rem;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 30px rgba(74, 74, 105, 0.167);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(255, 255, 255, 0.49);
+}
+
+.name-age {
+    display: flex;
+    justify-content: space-between;
+}
+
+.class-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.class-name input {
+    height: 2rem;
+    width: 12rem;
+}
+
+.class-age {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.class-age input {
+    height: 2rem;
+    width: 5rem;
+}
+
+.cl-add {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.6rem;
+    gap: 0.4rem;
+}
+.cl-add input {
+    height: 2rem;
+}
+
+.gender-ins {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.cl-gen {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.cl-ins {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.cl-more {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.cl-more textarea {
+    height: 5rem;
+    overflow-y: scroll;
+    resize: none;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+#sub-btn {
+    height: 2rem;
+    width: 5rem;
+    font-size: 1rem;
+}
+
+input, textarea {
+    font-family: "Rubik";
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid rgba(161, 168, 228, 0.49);
+    border-radius: 8px;
+    background-color: white;
+}
+
+button {
+    background: white;
+    border: 1px solid rgba(161, 168, 228, 0.49);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: scale 100ms;
+}
+
+button:hover {
+    scale: 105%;
+}
+
+button:active {
+    scale: 95%;
+}

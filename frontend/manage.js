@@ -1,11 +1,12 @@
 import axios from "axios";
 
+const API = import.meta.env.VITE_API_URL;
 const usersCon = document.querySelector("#getUsersCon");
 
 // DELETE
 const deleteUser = async (userID) => {
     try {
-        const response = await axios.delete(`/api/users/${userID}`)
+        const response = await axios.delete(`${API}/users/${userID}`)
         console.log(response.data);
         getUsers();
     } catch (error) {
@@ -70,7 +71,7 @@ const loadUsers = (users) => {
 // GET
 const getUsers = async () => {
     try {
-        const response = await axios.get("/api/users");
+        const response = await axios.get(`${API}/users`);
         const users = response.data;
         console.log(users);
         loadUsers(users);
@@ -112,7 +113,7 @@ findBtn.addEventListener("click", async () => {
     }
 
     try {
-        const response = await axios.get(`/api/users/${userID}`);
+        const response = await axios.get(`${API}/users/${userID}`);
         const user = response.data;
         console.log(response.data);
 

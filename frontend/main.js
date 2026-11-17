@@ -4,6 +4,8 @@ let mode = "CREATE";
 let selectedId = "";
 let noProblem = "";
 
+const API = import.meta.env.VITE_API_URL;
+
 // URLSearchParams
 window.onload = async () => {
     const URLParams = new URLSearchParams(window.location.search);
@@ -17,7 +19,7 @@ window.onload = async () => {
 
         // GET FOR UPDATE BY ID
         try {
-            const response = await axios.get(`/api/users/${selectedId}`);
+            const response = await axios.get(`${API}/users/${selectedId}`);
             const user = response.data;
             console.log(user);
 
@@ -103,7 +105,7 @@ const postUsers = async () => {
     }
 
     try {
-        const response = await axios.post("/api/users", user);
+        const response = await axios.post(`${API}/users`, user);
         const users = response.data;
         console.log(users);
 
@@ -183,7 +185,7 @@ const updateUser = async (selectedId) => {
     }
 
     try {
-        const response = await axios.put(`/api/users/${selectedId}`, user);
+        const response = await axios.put(`${API}/users/${selectedId}`, user);
         const users = response.data;
         console.log(users);
 

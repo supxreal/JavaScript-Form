@@ -1,10 +1,20 @@
 import express from "express";
 import { createClient } from "@libsql/client";
+import dotenv from "dotenv";
+import { fileURLToPath } from "node:url";
 
-// Use libSQL
+dotenv.config({ path: fileURLToPath(new URL("./.env", import.meta.url)) });
+const { TURSO_URL, TURSO_AUTH_TOKEN } = process.env;
+
+if (!TURSO_URL || !TURSO_AUTH_TOKEN) {
+    throw new Error("TURSO_URL and TURSO_AUTH_TOKEN must be configured");
+}
+
 const db = createClient({
-    url: "file:/Users/macsuphawit/Documents/Javascript_Form/server/databaseFlie.db"
-})
+    url: TURSO_URL,
+    authToken: TURSO_AUTH_TOKEN
+});
+
 const usersRouter = express.Router();
 usersRouter.use(express.json());
 

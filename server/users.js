@@ -66,7 +66,7 @@ usersRouter.get("/:id", async (req, res) => {
 usersRouter.post("/", async (req, res) => {
     try {
         const { fullname, age, address, gender, interest, infomation } = req.body;
-        if (!fullname || !age || !address || !gender || !interest) {
+        if (!fullname || !age || !address || !gender || !interest || !infomation) {
             return res.status(400).json({
                 error: "404 Bad request"
             })

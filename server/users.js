@@ -1,6 +1,7 @@
 import express from "express";
 import { createClient } from "@libsql/client";
 
+// Use libSQL
 const db = createClient({
     url: "file:/Users/macsuphawit/Documents/Javascript_Form/server/databaseFlie.db"
 })
